@@ -23,7 +23,7 @@ public class ControllerInput : MonoBehaviour {
 
 		left = Input.GetKey(KeyCode.A);
 		right = Input.GetKey(KeyCode.D);
-		jump = Input.GetKey(KeyCode.W);
+		jump = Input.GetKeyDown(KeyCode.W);
 		crouch = Input.GetKey(KeyCode.S);
 
 		space = Input.GetKey(KeyCode.Space);
@@ -34,9 +34,7 @@ public class ControllerInput : MonoBehaviour {
 		playerInput.y = Input.GetAxis("Vertical");
 
 		motor.Move(playerInput);
-		if (space) 
-		{
-			motor.Shoot(space);
-		}
+		motor.Shoot(space);
+		if (jump) motor.Jump();
 	}
 }

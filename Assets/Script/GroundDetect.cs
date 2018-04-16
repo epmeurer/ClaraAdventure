@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundDetect : MonoBehaviour 
+public class GroundDetect : MonoBehaviour
 {
-
-	[SerializeField] Collider2D feetCollider;
 	public bool isGrounded;
+	[SerializeField] Transform groundedObject;
 	
-
 	// Use this for initialization
 	void OnEnable () 
 	{
-		feetCollider = GetComponentInChildren<Collider2D>();
 		isGrounded = false;
 	}
 	// Use this for initialization
@@ -21,6 +18,8 @@ public class GroundDetect : MonoBehaviour
         if (other.gameObject.tag == "Ground") 
 		{
             isGrounded=true;
+			groundedObject = this.transform.parent;
+			groundedObject.transform.SetParent(other.transform);
     	}
     }
              
@@ -37,6 +36,11 @@ public class GroundDetect : MonoBehaviour
         if (other.gameObject.tag == "Ground") 
 		{
             isGrounded=false;
+			if (groundedObject != null) 
+				{
+					groundedObject.transform.parent = null;
+					groundedObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+				}
     	}
     }
 

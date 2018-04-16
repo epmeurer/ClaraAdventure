@@ -7,6 +7,10 @@ TagManager:
   - Ground
   - PlayerFeet
   - PlayerCameraFollow
+  - Wall
+  - FirePoint
+  - Enemy
+  - DamageRadius
   layers:
   - Default
   - TransparentFX

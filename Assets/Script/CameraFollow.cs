@@ -22,13 +22,15 @@ public class CameraFollow : MonoBehaviour
 		goCam = GameObject.FindGameObjectWithTag("MainCamera");
 		playerPosition =cameraPosition = cameraSpeed = Vector2.zero;
 		followFrameRate = 10f;
+
+		FocusOnPlayer();
 	}
 	void Update ()
 	{
 		playerPosition = playerBody.position;
 		cameraPosition = new Vector2 (goCam.transform.position.x, goCam.transform.position.y);
 
-		cameraSpeed = new Vector2 ( (playerPosition.x - cameraPosition.x)/followFrameRate, (playerPosition.y - cameraPosition.y)/followFrameRate );
+		cameraSpeed = new Vector2 ( (playerPosition.x - cameraPosition.x)/(followFrameRate + 5*Vector2.Distance(playerPosition,cameraPosition)), (playerPosition.y - cameraPosition.y)/(followFrameRate + 5*Vector2.Distance(playerPosition,cameraPosition)) );
 
 		if (Vector2.Distance(playerPosition,cameraPosition) > 4f)
 		{
@@ -44,6 +46,9 @@ public class CameraFollow : MonoBehaviour
 			}
 		}
 	}
-	
-	
+	public void FocusOnPlayer ()
+	{
+		playerPosition = playerBody.position;
+		goCam.transform.position =  new Vector3 (playerPosition.x, playerPosition.y, goCam.transform.position.z);
+	}
 }

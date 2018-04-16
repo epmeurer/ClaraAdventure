@@ -51,12 +51,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Bullet.cs" />
      <Compile Include="Assets\Script\CameraFollow.cs" />
      <Compile Include="Assets\Script\ControllerInput.cs" />
      <Compile Include="Assets\Script\CreateScenario.cs" />
-     <Compile Include="Assets\Script\FloorPlataform.cs" />
+     <Compile Include="Assets\Script\CyclingPlataform.cs" />
+     <Compile Include="Assets\Script\Enemy.cs" />
+     <Compile Include="Assets\Script\EnemyPlayerDetect.cs" />
+     <Compile Include="Assets\Script\EnemyTurnDetect.cs" />
+     <Compile Include="Assets\Script\EnemyWallDetect.cs" />
      <Compile Include="Assets\Script\GroundDetect.cs" />
+     <Compile Include="Assets\Script\Gun.cs" />
+     <Compile Include="Assets\Script\MovingPlataform.cs" />
+     <Compile Include="Assets\Script\PlayerDamageEnemy.cs" />
      <Compile Include="Assets\Script\PlayerMotor.cs" />
+     <Compile Include="Assets\Script\SelfDestructPlataform.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
