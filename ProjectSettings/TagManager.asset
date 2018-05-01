@@ -11,6 +11,8 @@ TagManager:
   - FirePoint
   - Enemy
   - DamageRadius
+  - Coin
+  - Life
   layers:
   - Default
   - TransparentFX
