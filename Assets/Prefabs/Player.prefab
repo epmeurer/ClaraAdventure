@@ -1692,7 +1692,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1777,31 +1777,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668886859a2c95a49902fffafa16beec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrounded: 0
-  isJumping: 0
-  enemyContact: 0
-  isCrouching: 0
-  isGameRunning: 0
-  isGameOver: 0
-  isVulnerable: 1
-  direction: 1
-  jumpForce: 6
-  walkImpulse: 30
-  speedMultiplier: 1
-  maxSpeed: 5
-  movementX: 0
-  movementY: 0
-  hitPoints: 50
+  score: 0
+  lifes: 3
   playerBody: {fileID: 0}
   gd: {fileID: 114214195125392046}
   dmgScript: {fileID: 0}
+  scoreScript: {fileID: 0}
+  armatureComponent: {fileID: 0}
+  idleAnim: {fileID: 0}
+  lifeBoard: {fileID: 0}
+  healthBoard: {fileID: 0}
+  lastRespawnPoint: {x: 0, y: 0, z: 0}
   fireRate: 3
   maxAmmo: 10
   reloadTime: 1
   invulnerableTime: 0.5
-  isReloading: 0
   firePoint: {fileID: 1477339553153576}
   bullet: {fileID: 1898055558276250, guid: 2477f61c256b1ff4e810f4592c819f0b, type: 2}
+  cameraScript: {fileID: 0}
 --- !u!114 &114480081758872404
 MonoBehaviour:
   m_ObjectHideFlags: 1

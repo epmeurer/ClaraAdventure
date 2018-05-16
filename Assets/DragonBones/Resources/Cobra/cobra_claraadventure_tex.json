@@ -1,1 +1,1 @@
-{"width":1024,"imagePath":"cobra_claraadventure_tex.png","height":256,"name":"cobra_claraadventure","SubTexture":[{"width":563,"y":1,"height":230,"name":"cobra_animacao","x":1}]}
+{"imagePath":"cobra_claraadventure_tex.png","width":1024,"SubTexture":[{"width":563,"y":1,"height":230,"name":"cobra_animacao","x":1}],"height":256,"name":"cobra_claraadventure"}

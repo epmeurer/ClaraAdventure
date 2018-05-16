@@ -123,7 +123,9 @@
      <Compile Include="Assets\Script\Player\PlayerScoreIncrement.cs" />
      <Compile Include="Assets\Script\Scenario\CreateScenario.cs" />
      <Compile Include="Assets\Script\Scenario\GroundDetect.cs" />
+     <Compile Include="Assets\Script\Scenario\MenuController.cs" />
      <Compile Include="Assets\Script\Scenario\PlataformScript.cs" />
+     <Compile Include="Assets\Script\Scenario\StageClear.cs" />
      <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_Grab.shader" />
      <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_UIFramebuffer.shader" />
      <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_UIGrab.shader" />

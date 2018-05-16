@@ -27,10 +27,12 @@ public class CameraFollow : MonoBehaviour
 	}
 	void Update ()
 	{
+		float distanceFromPlayer;
 		playerPosition = playerBody.position;
 		cameraPosition = new Vector2 (goCam.transform.position.x, goCam.transform.position.y);
 
-		cameraSpeed = new Vector2 ( (playerPosition.x - cameraPosition.x)/(followFrameRate + 5*Vector2.Distance(playerPosition,cameraPosition)), (playerPosition.y - cameraPosition.y)/(followFrameRate + 5*Vector2.Distance(playerPosition,cameraPosition)) );
+		distanceFromPlayer = Vector2.Distance(playerPosition,cameraPosition);
+		cameraSpeed = new Vector2 ( (playerPosition.x - cameraPosition.x)*distanceFromPlayer/(followFrameRate), (playerPosition.y - cameraPosition.y)*distanceFromPlayer/(followFrameRate));
 
 		if (Vector2.Distance(playerPosition,cameraPosition) > 4f)
 		{
